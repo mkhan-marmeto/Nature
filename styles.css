@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+:root{
+    --green: rgb(57, 175, 57);
+    --mainpadding: 4vh 6vh;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+.main{
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+.nav{
+    height: 100px;
+    width: 100%;
+    border-bottom: 2px solid var(--green);
+    padding: var(--mainpadding);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    height: 100%;
+    width: 100px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.logo img{
+    height: 60px;
+    width: 60px;
+}
+.logo h1{
+    color: var(--green);
+    font-size: 25px;
+}
+.nav button{
+    background-color: #fff;
+    color: var(--green);
+    padding: 1vw 1.1vw;
+    border-radius: 5px;
+    font-size: 1.1vw;
+    font-weight: 700;
+    cursor: pointer;
+    border: 2px solid var(--green);
+}
+.container{
+    height: calc(100% - 100px);
+    padding: var(--mainpadding);
+    display: flex;
+}
+.content-box{
+    height: 100%;
+    width: 50%;
+    margin-top: 4vw;
+    /* background-color: red; */
+    /* padding: var(--mainpadding); */
+}
+.content-box h1{
+    font-size: 3vw;
+    line-height: 4vw;
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+.content-box p{
+    font-size: 1.1vw;
+    line-height: 2vw;
+    font-weight: 400;
+    color: var(--green);
+    margin-bottom: 4vh;
+}
+h1 span{
+    color: var(--green);
+    font-weight: bolder;
+}
+.content-box button{
+    background-color: #fff;
+    color: var(--green);
+    padding: 1.5vw 2.2vw;
+    border-radius: 5px;
+    font-size: 1.1vw;
+    font-weight: 700;
+    cursor: pointer;
+    border: 2px solid var(--green);
+}
+button:hover{
+    background-color: var(--green);
+    color: #fff;
+}
+.image-box{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* padding: var(--mainpadding); */
+    /* background-color: blue; */   
+}
+.image-box img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    transition: opacity 0.5s ease-in-out;
+    opacity: 1;
+}
+.fade-out {
+    opacity: 0;
+}
+
+/* ---------Media Quries---------- */
+
+@media (max-width: 600px) {
+    .nav button{
+        background-color: #fff;
+        color: var(--green);
+        padding: 3vw 5vw;
+        border-radius: 5px;
+        font-size: 4vw;
+        font-weight: 700;
+        cursor: pointer;
+        border: 2px solid var(--green);
+    }
+    .container{
+        height: calc(100% - 100px);
+        display: flex;
+        flex-direction: column;
+    }
+    .content-box{
+        height: 50%;
+        width: 100%;
+        /* background-color: red; */
+    }
+    .content-box h1{
+        font-size: 6vw;
+        line-height: 4vh;
+        font-weight: bold;
+        padding-bottom: 10px;
+    }
+    .content-box p{
+        font-size: 3.5vw;
+        line-height: 6vw;
+        font-weight: 600;
+        color: var(--green);
+        margin-bottom: 2vh;
+    }
+    .content-box button{
+        background-color: #fff;
+        color: var(--green);
+        padding: 3vw 5vw;
+        border-radius: 5px;
+        font-size: 4vw;
+        font-weight: 700;
+        cursor: pointer;
+        border: 2px solid var(--green);
+    }
+    .image-box{
+        height: 50%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* margin-top: 80px; */
+        /* padding: var(--mainpadding); */
+        /* background-color: blue; */
+
+    }
+    .image-box img{
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+        transition: opacity 0.5s ease-in-out;
+        opacity: 1;
+    }
+    .fade-out {
+        opacity: 0;
+    }
+}
+
+@media (max-width: 375px) {
+    .image-box{
+        margin-top: 80px;
+    }
+}
